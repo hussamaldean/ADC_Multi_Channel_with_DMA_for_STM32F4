@@ -1,0 +1,12 @@
+--cpu=Cortex-M4.fp.sp
+".\objects\main.o"
+".\objects\spi.o"
+".\objects\delay.o"
+".\objects\glcd_st7735.o"
+".\objects\adc.o"
+".\objects\startup_stm32f407xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\ST7735 Bare Metal.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ST7735 Bare Metal.map" -o ".\Objects\ST7735 Bare Metal.axf"
